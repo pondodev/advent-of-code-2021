@@ -13,6 +13,7 @@ struct Instruction {
 struct Position {
     int depth       = 0;
     int horizontal  = 0;
+    int aim         = 0;
 };
 
 #endif
