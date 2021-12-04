@@ -89,8 +89,7 @@ void part2() {
             bool has_1 = *it & mask; // check if there's a 1 in this spot
             bool want_1 = weights[ i ] >= 0; // check if we're looking for a 1
 
-            // what the fuck
-            if ( !(want_1 ^ has_1) ) it = oxygen_pool.erase( it );
+            if ( want_1 == has_1 ) it = oxygen_pool.erase( it );
             else ++it;
         }
 
@@ -108,8 +107,7 @@ void part2() {
             bool has_1 = *it & mask; // check if there's a 1 in this spot
             bool want_1 = weights[ i ] <= 0; // check if we're looking for a 1
 
-            // what the fuck
-            if ( !(want_1 ^ has_1) ) it = co2_pool.erase( it );
+            if ( want_1 == has_1 ) it = co2_pool.erase( it );
             else ++it;
         }
 
